@@ -11,7 +11,9 @@ const links = [
   <div>Logo</div>
   <div class="flex gap-6">
       {links.map(link => (
-        <a href={link.href} class=" no-underline hover:underline">{link.text}</a>
+        <a href="#" class="font-display text-6xl font-bold leading-tight">
+          <a href={link.href} class="link link-underline link-underline-black">{link.text}</a>
+        </a>
       ))}
   </div>
 </nav>

@@ -1,7 +1,63 @@
 ---
-// web developer at today's carolinian
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+export interface Experience {
+  title: string,
+  company: string,
+  duration: string,
+  description: string[],
+  link: string,
+  image: string
+}
+
+const experience: Experience[] = [
+  {
+    title: "Web Developer",
+    company: "Today's Carolinian",
+    duration: "September 2024 - Present",
+    description: [
+      "Contributed in creating seamless UI and Login Page for Today's Carolinian USC Days Official Website",
+    ],
+    link: "https://todayscarolinian.com/",
+    image: ""
+  }
+]
 ---
 
-<div id="experience" class="p-10">
-  Experience
+<div id="experience" class="p-10 flex flex-col gap-6">
+  <strong>
+    <span class="font-display text-4xl font-bold leading-tight link link-underline link-underline-black">
+      Experience
+    </span>
+  </strong>
+  
+  <div>
+    {
+      experience.map((e) => (
+        <Card className="bg-[#0d0d0d] text-white">
+          <CardHeader>
+            <CardTitle>{e.title}</CardTitle>
+            <CardDescription>{e.company}</CardDescription>
+            <CardDescription>{e.duration}</CardDescription>
+          </CardHeader>
+          <CardContent>
+          <ul class="list-disc list-inside">
+            {
+              e.description.map((d) => (
+                <li>{d}</li>
+              ))
+            }
+          </ul>
+          </CardContent>
+        </Card>
+      ))
+    }
+  </div>
+  
 </div>
