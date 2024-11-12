@@ -8,7 +8,7 @@ const techStack = [
   },
   {
     name: "React",
-    img: "/public/tech_stack/react.svg",
+    img: "/react.svg",
   },
   {
     name: "TypeScript",
