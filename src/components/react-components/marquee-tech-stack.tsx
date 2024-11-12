@@ -4,7 +4,7 @@ import Marquee from "@/components/ui/marquee";
 const techStack = [
   {
     name: "Next JS",
-    img: "/public/tech_stack/nextjs-original.svg",
+    img: "/tech_stack/nextjs-original.svg",
   },
   {
     name: "React",
@@ -12,55 +12,55 @@ const techStack = [
   },
   {
     name: "TypeScript",
-    img: "/public/tech_stack/typescript-original.svg",
+    img: "/tech_stack/typescript-original.svg",
   },
   {
     name: "Node JS",
-    img: "/public/tech_stack/nodejs-original.svg",
+    img: "/tech_stack/nodejs-original.svg",
   },
   {
     name: "Supabase",
-    img: "/public/tech_stack/supabase-original.svg",
+    img: "/tech_stack/supabase-original.svg",
   },
   {
     name: "Express",
-    img: "/public/tech_stack/express-original.svg",
+    img: "/tech_stack/express-original.svg",
   },
   {
     name: "Tailwind CSS",
-    img: "/public/tech_stack/tailwindcss-original.svg",
+    img: "/tech_stack/tailwindcss-original.svg",
   },
   {
     name: "Prisma",
-    img: "/public/tech_stack/prisma-original.svg",
+    img: "/tech_stack/prisma-original.svg",
   },
   {
     name: "MySQL",
-    img: "/public/tech_stack/mysql-original.svg",
+    img: "/tech_stack/mysql-original.svg",
   },
   {
     name: "PostgreSQL",
-    img: "/public/tech_stack/postgresql.svg",
+    img: "/tech_stack/postgresql.svg",
   },
   {
     name: "JWT",
-    img: "/public/tech_stack/jwt-icon.svg",
+    img: "/tech_stack/jwt-icon.svg",
   },
   {
     name: "Playwright",
-    img: "/public/tech_stack/playwright.svg",
+    img: "/tech_stack/playwright.svg",
   },
   {
     name: "Git",
-    img: "/public/tech_stack/git.svg",
+    img: "/tech_stack/git.svg",
   },
   {
     name: "JavaScript",
-    img: "/public/tech_stack/javascript.svg",
+    img: "/tech_stack/javascript.svg",
   },
   {
     name: "MongoDB",
-    img: "/public/tech_stack/mongodb-icon.svg",
+    img: "/tech_stack/mongodb-icon.svg",
   },
 ];
 
