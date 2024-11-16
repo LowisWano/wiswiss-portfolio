@@ -1,8 +1,22 @@
 ---
-// cards of projects I made: Atlas, future game dev proj
+import ProjectCard from "@/components/ProjectCard.astro"
+
+const projects = [
+  {
+    title: "Atlas",
+    description: "A medieval RPG style task management app that gamifies your goals and tasks. Earn exp, gold, and rank points as you accomplish tasks to level up your character and increase your rank!",
+    image: "/images/atlas-showcase.png",
+    tech: [
+      "ReactJS",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+    ]
+  },
+]
 ---
 
-<div id="projects" class="p-10 flex flex-col hover-parent">
+<div id="projects" class="p-10 flex flex-col gap-6 hover-parent">
 
   <strong class="flex items-center gap-2">
     <span class="font-display text-4xl font-bold leading-tight link link-underline link-underline-black">
@@ -10,4 +24,12 @@
     </span>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right text-gray-500"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg>
   </strong>
+
+  <div class="flex justify-center items-center flex-wrap">
+    {
+      projects.map((p) => (
+        <ProjectCard title={p.title} image={p.image} description={p.description} tech={p.tech}/>
+      ))
+    }
+  </div>
 </div>

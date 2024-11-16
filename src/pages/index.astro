@@ -8,15 +8,37 @@ import Footer from '@/components/Footer.astro'
 import Skills from '@/components/Skills.astro';
 import Projects from '@/components/Projects.astro';
 import '@fontsource-variable/dm-sans';
+import Particles from "@/components/ui/particles";
+import BlurFade from "@/components/ui/blur-fade";
 ---
 
-<Layout title="Luis Andrei Ouano">
-  <main class="p-4 sm:p-16">
+<Layout title="Luis Andrei Ouano | Portfolio">
+  <main class="sm:p-16">
     <!-- <Navbar /> -->
-		<Hero />
-    <Skills />
-    <Experience />
-    <Projects />
+    <Particles
+      className="absolute inset-0"
+      quantity={100}
+      ease={80}
+      color={'ffffff'}
+      refresh
+      client:load
+    />
+
+    <BlurFade delay={0.4} client:visible inView>
+      <Hero />
+    </BlurFade>
+		
+    <BlurFade delay={0.4} client:visible inView>
+      <Skills />
+    </BlurFade>
+
+    <BlurFade delay={0.4} client:visible inView>
+      <Experience />
+    </BlurFade>
+
+    <BlurFade delay={0.4} client:visible inView>
+      <Projects />
+    </BlurFade>
     <Footer />
 	</main>
 </Layout>

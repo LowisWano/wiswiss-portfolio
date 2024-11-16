@@ -99,7 +99,7 @@ const TechCard = ({
 
 export default function MarqueeTechStack() {
   return (
-    <div className="relative flex h-[270px] w-full flex-col items-center justify-center overflow-hidden bg-background">
+    <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden bg-background">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((tech) => (
           <TechCard key={tech.name} {...tech} />

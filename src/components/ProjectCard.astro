@@ -1,0 +1,43 @@
+---
+import { MagicCard } from "@/components/ui/magic-card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+interface Props {
+  title: string;
+  image: string;
+  description: string;
+  tech: string[];
+}
+
+const { title, image, description, tech } = Astro.props;
+---
+
+<MagicCard
+  className="cursor-pointer flex-col sm:w-[367px]"
+  gradientColor="#121212"
+  client:load
+>
+  <img src={image} alt="" class="mx-auto h-60 w-full object-cover object-top">
+  <CardHeader>
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div class="flex flex-wrap gap-2">
+      {
+        tech.map(t => (
+          <Badge className="rounded-xl">{t}</Badge>
+        ))
+      }
+    </div>
+  </CardContent>
+</MagicCard>
+
